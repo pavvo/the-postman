@@ -7,8 +7,10 @@ export interface AppContextType {
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 
+const defaultMessageFromEnv = import.meta.env.VITE_LOG_MESSAGE;
+
 export const AppProvider = ({ children }: PropsWithChildren) => {
-  const [defaultMessage, setDefaultMessage] = useState("Hello from");
+  const [defaultMessage, setDefaultMessage] = useState(defaultMessageFromEnv);
 
   return <AppContext.Provider value={{ defaultMessage, setDefaultMessage }}>{children}</AppContext.Provider>;
 };

@@ -36,6 +36,12 @@ Navigate to the project directory:
 cd the-postman
 ```
 
+Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+
 Then, install the dependencies:
 
 ```bash
@@ -47,3 +53,5 @@ And finally, start the application:
 ```bash
 pnpm start:dev
 ```
+
+🚀 The application will be running at [http://localhost:5173/](http://localhost:5173)
