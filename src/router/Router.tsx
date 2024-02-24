@@ -3,7 +3,7 @@ import { useRoutes } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 
 import { Posts } from "@/pages/posts";
-import { Post } from "@/pages/post/Post";
+import { Post } from "@/pages/post";
 
 import { RoutePaths } from "./RoutePaths";
 
