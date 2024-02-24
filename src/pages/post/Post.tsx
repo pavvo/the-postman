@@ -28,7 +28,7 @@ export function Post() {
         style={{
           display: "block",
           marginBottom: "10px",
-          color: "#2196f3",
+          color: "var(--blue)",
         }}>
         Back to posts
       </Link>

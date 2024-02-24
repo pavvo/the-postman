@@ -9,7 +9,6 @@
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.87);
 }
 
 .comment-mail {
@@ -18,5 +17,5 @@
   line-height: 1.25;
   font-weight: 400;
   /* nice blue color */
-  color: #2196f3;
+  color: var(--blue);
 }
