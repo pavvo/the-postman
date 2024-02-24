@@ -15,6 +15,11 @@ export function Search() {
   };
 
   return (
-    <input type="text" placeholder="Search..." value={searchParams.get("q") || ""} onChange={handleSearch} />
+    <input
+      type="text"
+      placeholder="Search posts by username"
+      value={searchParams.get("q") || ""}
+      onChange={handleSearch}
+    />
   );
 }

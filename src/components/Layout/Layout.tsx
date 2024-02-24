@@ -16,6 +16,7 @@ export function Layout({ message }: LayoutProps) {
 
   return (
     <div className="layout">
+      <h2 className="app-title">The Postman</h2>
       <Outlet />
     </div>
   );
