@@ -1,8 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 
+import { Post } from "@/components/Post";
+
 import { usePosts } from "./hooks/usePosts";
 
-import { Post } from "./components/Post";
 import { Search } from "./components/Search";
 
 import "./Posts.css";
@@ -28,16 +29,18 @@ export function Posts() {
   });
 
   return (
-    <div className="posts-container">
+    <div>
       <Search />
-      {filteredPosts.map((post) => (
-        <Post
-          key={post.id}
-          post={post}
-          user={users?.find((user) => user.id === post.userId)}
-          comments={comments?.filter((comment) => comment.postId === post.id)}
-        />
-      ))}
+      <div className="posts-container">
+        {filteredPosts.map((post) => (
+          <Post
+            key={post.id}
+            post={post}
+            user={users?.find((user) => user.id === post.userId)}
+            comments={comments?.filter((comment) => comment.postId === post.id)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

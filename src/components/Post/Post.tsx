@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import type { Post, User, Comment as IComment } from "@/pages/posts/hooks/usePosts";
 
-import { Comment } from "../Comment";
+import { Comment } from "../../pages/posts/components/Comment";
 
 import "./Post.css";
 
@@ -15,10 +15,9 @@ export interface PostProps {
 export function Post({ post, user, comments }: PostProps) {
   return (
     <div className="post-container">
-      <Link to={`/posts/${post.id}`}>
+      <Link to={`/post/${post.id}`}>
         <h2>{post.title}</h2>
       </Link>
-
       <p>{user?.name}</p>
       <p>{post.body}</p>
       <h3>Comments</h3>

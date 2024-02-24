@@ -12,16 +12,10 @@ interface UseFetchResult<T> {
   isLoading: boolean;
 }
 
-export enum Endpoint {
-  POSTS = "/posts",
-  COMMENTS = "/comments",
-  USERS = "/users",
-}
-
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
 export const useFetch = <T>(
-  endpoint: Endpoint,
+  endpoint: string,
   options: Options = {},
   skip: boolean = false
 ): UseFetchResult<T> => {

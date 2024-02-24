@@ -1,4 +1,4 @@
-import { Endpoint, useFetch } from "@/hooks/useFetch";
+import { useFetch } from "@/hooks/useFetch";
 
 export interface Post {
   userId: number;
@@ -22,9 +22,9 @@ export interface User {
 }
 
 export const usePosts = () => {
-  const postsFetch = useFetch<Post[]>(Endpoint.POSTS);
-  const commentsFetch = useFetch<Comment[]>(Endpoint.COMMENTS);
-  const usersFetch = useFetch<User[]>(Endpoint.USERS);
+  const postsFetch = useFetch<Post[]>("/posts");
+  const commentsFetch = useFetch<Comment[]>("/comments");
+  const usersFetch = useFetch<User[]>("/users");
 
   const { data: posts, isLoading: postsLoading, error: postsError } = postsFetch;
   const { data: comments, isLoading: commentsLoading, error: commentsError } = commentsFetch;
