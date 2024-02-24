@@ -1,9 +1,11 @@
-function App() {
+import { BrowserRouter } from "react-router-dom";
+
+import Router from "./router/Router";
+
+export function App() {
   return (
-    <div>
-      <h1>The Postman</h1>
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
-
-export default App;
