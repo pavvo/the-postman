@@ -1,0 +1,22 @@
+.comment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.comment-mail {
+  margin: 0.25rem 0;
+  padding: 0;
+  line-height: 1.25;
+  font-weight: 400;
+  /* nice blue color */
+  color: #2196f3;
+}

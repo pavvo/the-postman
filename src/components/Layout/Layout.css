@@ -2,8 +2,5 @@
   max-width: 600px;
   margin: 0 auto;
   height: 100vh;
-
-  /* @DONOTSHIP: Remove borders */
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  padding: 20px;
 }
