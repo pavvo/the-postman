@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 
 import type { Post, User, Comment as IComment } from "@/pages/posts/hooks/usePosts";
 
+import { useAppContext } from "@/hooks/useAppContext";
+import { useLogger } from "@/hooks/useLogger";
+
 import { Comment } from "./Comment";
 
 import "./Post.css";
@@ -13,6 +16,10 @@ export interface PostProps {
 }
 
 export function Post({ post, user, comments }: PostProps) {
+  const { defaultMessage } = useAppContext();
+
+  useLogger(defaultMessage, "Post");
+
   return (
     <div className="post-container">
       <Link to={`/post/${post.id}`}>

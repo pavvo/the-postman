@@ -1,5 +1,8 @@
 import type { Comment } from "@/pages/posts/hooks/usePosts";
 
+import { useAppContext } from "@/hooks/useAppContext";
+import { useLogger } from "@/hooks/useLogger";
+
 import "./Comment.css";
 
 export interface CommentProps {
@@ -7,6 +10,10 @@ export interface CommentProps {
 }
 
 export function Comment({ comment }: CommentProps) {
+  const { defaultMessage } = useAppContext();
+
+  useLogger(defaultMessage, "Comment");
+
   return (
     <li className="comment-container">
       <h3>{comment.name}</h3>

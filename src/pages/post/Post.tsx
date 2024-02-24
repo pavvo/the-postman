@@ -11,8 +11,6 @@ export function Post() {
 
   const { post, comments, user, isLoading } = usePost(postId as string);
 
-  console.log(post, comments);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
