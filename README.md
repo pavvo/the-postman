@@ -2,6 +2,26 @@
 
 The Postman is a simple, React based web application that allows users to read posts and comments associated with those posts.
 
+## Prerequisites
+
+Before you begin, ensure you have installed the correct version of Node.js. For managing Node.js versions, use [nvm](https://github.com/nvm-sh/nvm). To install `nvm` run:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+Then, install the latest version of Node.js:
+
+```bash
+nvm install
+```
+
+This will install the latest version of Node.js specified in the `.nvmrc` file. You will also need to have `pnpm` installed. You can install it by running:
+
+```bash
+npm install -g pnpm
+```
+
 ## Getting Started
 
 To get started, clone the repository:
@@ -14,12 +34,6 @@ Navigate to the project directory:
 
 ```bash
 cd the-postman
-```
-
-We are using [pnpm](https://pnpm.io/) as the package manager for this project. If you don't have pnpm installed, you can install it by running:
-
-```bash
-npm install -g pnpm
 ```
 
 Then, install the dependencies:
