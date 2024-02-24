@@ -1,10 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 
 import { Post } from "@/components/Post";
+import { Search } from "@/components/Search";
 
 import { usePosts } from "./hooks/usePosts";
-
-import { Search } from "./components/Search";
 
 import "./Posts.css";
 
