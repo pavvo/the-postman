@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import type { Post, User, Comment as IComment } from "@/pages/posts/hooks/usePosts";
 
-import { Comment } from "../../pages/posts/components/Comment";
+import { Comment } from "./Comment";
 
 import "./Post.css";
 

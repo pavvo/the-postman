@@ -9,7 +9,7 @@ import { usePost } from "./hooks/usePost";
 export function Post() {
   const { postId } = useParams();
 
-  const { post, comments, user, isLoading, error } = usePost(postId as string);
+  const { post, comments, user, isLoading } = usePost(postId as string);
 
   console.log(post, comments);
 
