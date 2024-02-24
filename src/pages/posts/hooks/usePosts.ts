@@ -1,4 +1,4 @@
-import { useFetch } from "@/hooks/useFetch";
+import { Endpoint, useFetch } from "@/hooks/useFetch";
 
 export interface Post {
   userId: number;
@@ -22,9 +22,9 @@ export interface User {
 }
 
 export const usePosts = () => {
-  const postsFetch = useFetch<Post[]>("https://jsonplaceholder.typicode.com/posts");
-  const commentsFetch = useFetch<Comment[]>("https://jsonplaceholder.typicode.com/comments");
-  const usersFetch = useFetch<User[]>("https://jsonplaceholder.typicode.com/users");
+  const postsFetch = useFetch<Post[]>(Endpoint.POSTS);
+  const commentsFetch = useFetch<Comment[]>(Endpoint.COMMENTS);
+  const usersFetch = useFetch<User[]>(Endpoint.USERS);
 
   const { data: posts, isLoading: postsLoading, error: postsError } = postsFetch;
   const { data: comments, isLoading: commentsLoading, error: commentsError } = commentsFetch;

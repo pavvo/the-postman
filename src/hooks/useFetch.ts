@@ -12,10 +12,24 @@ interface UseFetchResult<T> {
   isLoading: boolean;
 }
 
-export const useFetch = <T>(url: string, options: Options = {}, skip: boolean = false): UseFetchResult<T> => {
+export enum Endpoint {
+  POSTS = "/posts",
+  COMMENTS = "/comments",
+  USERS = "/users",
+}
+
+const BASE_URL = "https://jsonplaceholder.typicode.com";
+
+export const useFetch = <T>(
+  endpoint: Endpoint,
+  options: Options = {},
+  skip: boolean = false
+): UseFetchResult<T> => {
   const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const url = `${BASE_URL}${endpoint}`;
 
   useEffect(() => {
     const abortController = new AbortController();
