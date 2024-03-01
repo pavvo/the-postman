@@ -2,6 +2,14 @@
 
 The Postman is a simple, React based web application that allows users to read posts and comments associated with those posts.
 
+## Task details
+
+I have spent around 3 hours on this task (See the screenshot below)
+
+![Screenshot](./screenshot.png)
+
+You can find deployed version of the app [here](https://the-postman.vercel.app/)
+
 ## Prerequisites
 
 Before you begin, ensure you have installed the correct version of Node.js. For managing Node.js versions, use [nvm](https://github.com/nvm-sh/nvm). To install `nvm` run:
