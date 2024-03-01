@@ -12,12 +12,7 @@ export function Posts() {
 
   const { posts, users, comments, isLoading } = usePosts();
 
-  // @TODO: Add a loading spinner
-  if (isLoading) return <p>Loading...</p>;
-
-  if (!posts) return <p>No posts found</p>;
-
-  const filteredPosts = posts.filter((post) => {
+  const filteredPosts = posts?.filter((post) => {
     if (!searchParams.get("q")) return true;
 
     const user = users?.find((user) => user.id === post.userId);
@@ -27,18 +22,24 @@ export function Posts() {
     }
   });
 
+  if (isLoading) return <p>Loading...</p>;
+
   return (
     <div>
       <Search />
       <div className="posts-container">
-        {filteredPosts.map((post) => (
-          <Post
-            key={post.id}
-            post={post}
-            user={users?.find((user) => user.id === post.userId)}
-            comments={comments?.filter((comment) => comment.postId === post.id)}
-          />
-        ))}
+        {filteredPosts?.length ? (
+          filteredPosts.map((post) => (
+            <Post
+              key={post.id}
+              post={post}
+              user={users?.find((user) => user.id === post.userId)}
+              comments={comments?.filter((comment) => comment.postId === post.id)}
+            />
+          ))
+        ) : (
+          <p>No posts found</p>
+        )}
       </div>
     </div>
   );
